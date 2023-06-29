@@ -6,11 +6,13 @@ export class ComponentA extends LitElement {
     @property({ type: Object }) config;
     otherConfig;
     connectedCallback(): void {
+        super.connectedCallback();
         console.log('component-a connectedCallback:');
         console.log('config:', this.config);
         console.log('otherConfig:', this.otherConfig);
     }
-    willUpdate() {
+    willUpdate(p) {
+        super.willUpdate(p);
         console.log('component-a willUpdate:');
         console.log('config:', this.config);
         console.log('otherConfig:', this.otherConfig);
