@@ -13,8 +13,14 @@ export class AppRoot extends LitElement {
         return html`
             <div class="">
                 <h1>Hello, world!</h1>
-                <component-a .config=${{ something: { something: 'something' } }}></component-a>
-                <component-b .config=${{ something: { something: 'something' } }}></component-b>
+                <component-a
+                    .config=${{ something: { something: 'something' } }}
+                    .otherConfig=${{ something: { something: 'something' } }}
+                ></component-a>
+                <component-b
+                    .config=${{ something: { something: 'something' } }}
+                    .otherConfig=${{ something: { something: 'something' } }}
+                ></component-b>
             </div>
         `;
     }

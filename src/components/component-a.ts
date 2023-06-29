@@ -4,13 +4,16 @@ import { customElement, property } from 'lit/decorators.js';
 @customElement('component-a')
 export class ComponentA extends LitElement {
     @property({ type: Object }) config;
+    otherConfig;
     connectedCallback(): void {
         console.log('component-a connectedCallback:');
-        console.log(this.config);
+        console.log('config:', this.config);
+        console.log('otherConfig:', this.otherConfig);
     }
     willUpdate() {
         console.log('component-a willUpdate:');
-        console.log(this.config);
+        console.log('config:', this.config);
+        console.log('otherConfig:', this.otherConfig);
     }
     render() {
         return html`
